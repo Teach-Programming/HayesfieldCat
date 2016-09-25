@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The Hayesfield Cat</title>
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>	
+</head>
+<body>
+<svg height="600" width="600">
+<!--background-->
+<polygon points="0,0 600,0 600,600 0,600" fill="#F3E5F5"id= "face"/>
+<!--body-->
+<circle cx="300" cy="600" r="200" fill="#9575CD"/>
+<circle cx="300" cy="400" r="150" fill="#00000"/>
+<circle cx="300" cy="550" r= "50" fill="gold"/>
+<!--ears-->
+<polygon fill="#9575CD" points="150,50 130,200 360,200" />
+<polygon fill="#9575CD" points="450,50 470,200 240,200" />
+<polygon fill="purple" points="445,60 460,200 240,210" />
+<polygon fill="purple" points="155,60 140,200 360,210" />
+<!--eyes-->
+<circle cx="300" cy="300" r="200" fill="#9575CD"/>
+<circle cx="400" cy="240" r="20" fill="black"/>
+<circle cx="200" cy="240" r="20" fill="black"/>
+<circle cx="405" cy="230" r="5" fill="white"/>
+<circle cx="205" cy="230" r="5" fill="white"/>
+<!--L wiskers-->
+<line x1="200" x2="300" y1="320" y2="320" stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<line x1="200" x2="300" y1="350" y2="320" stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<line x1="200" x2="300" y1="290" y2="320"  stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<!--R wiskers-->
+<line x1="400" x2="300" y1="320" y2="320" stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<line x1="400" x2="300" y1="350" y2="320" stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<line x1="400" x2="300" y1="290" y2="320" stroke-width="2" stroke="#000000" stroke-linecap="round"/>
+<!--mouth-->
+<path fill="transparent" stroke="black" stroke-width="5" d="M 300,340 q 0,75 -75,20 " />
+<path fill="transparent" stroke="black" stroke-width="5" d="M 300,340 q 0,75 75,20 " />
+<!--nose-->
+<polygon fill="#512DA8" points="300,345 275,300 330,300" />
+<text x="250" y="550" fill="purple" font-family="Verdana" font-size="19">Hayesfield</text>
+<text x="280" y="570" fill="purple" font-family="Verdana" font-size="19">Cat</text>
+</svg>
+
+<script id="Hayesfield-Cat">
+var BackgroundShape = $("#face");
+var isBackgroundBlue;
+isBackgroundBlue=true
+
+BackgroundShape.click(function() {
+
+if(isBackgroundBlue == true){
+    BackgroundShape.attr("fill", "#CE93D8");
+		isBackgroundBlue = false;
+
+  }else {
+    BackgroundShape.attr("fill", "#F3E5F5");
+  isBackgroundBlue = true;
+
+}
+})
+
+</script>
+</body>
+</html>
